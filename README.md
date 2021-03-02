@@ -1,3 +1,8 @@
 # salmon-cookie
 lalala salmon cookies repo
-https://github.com/calvincheng919/HS_Salmon_Cookies_Reference.git
+This Is Important Or Something!: https://github.com/calvincheng919/HS_Salmon_Cookies_Reference.git
+# Team Agreement!
+Communication!: Blah Blah Blah
+Disagreements!: BLAH BLAH BLAH
+Work Hours or something!: Blah blah blah!
+Git Work Flow or something!: Blah Blkah Blah!
