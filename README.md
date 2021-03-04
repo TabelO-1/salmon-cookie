@@ -8,4 +8,3 @@ Work: In Period(8-9)
 Git Process: Create a new branch for your work and push it back into main at the end of the period
 # TODO:
 # Team Name:
-# Agree on repo
