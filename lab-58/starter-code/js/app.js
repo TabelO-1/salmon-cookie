@@ -1,8 +1,6 @@
 'use strict';
 
-// TODO: assign an array to the hours variable below
-// your array should contain the hours of 6am through 7pm
-var hours;
+var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', ];
 
 // REVIEW: look at the JS object for a store below (seattle)
 // You will be copying this object design, and it's capabilities
@@ -32,7 +30,8 @@ var seattle = {
     this.calcCookiesEachHour();
     // TODO:  access the seattle store HTML list by it's ID
     // and assign it to the unorderedList variable below
-    var unorderedList;
+
+    var unorderedList = document.getElementById('seattle');
 
     for (var i = 0; i < hours.length; i++) {
       var listItem = document.createElement('li');
