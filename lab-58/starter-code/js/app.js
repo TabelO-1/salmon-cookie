@@ -40,8 +40,6 @@ var seattle = {
     unorderedList.appendChild(listItem);
   }
 };
-
-
 var tokyo = {
   locationName: 'Tokyo',
   minCustomersPerHour: 21,
@@ -79,7 +77,6 @@ var tokyo = {
     unorderedList.appendChild(listItem);
   }
 };
-
 var dubai = {
   locationName: 'Dubai',
   minCustomersPerHour: 12,
@@ -117,7 +114,6 @@ var dubai = {
     unorderedList.appendChild(listItem);
   }
 };
-
 var paris = {
   locationName: 'Paris',
   minCustomersPerHour: 42,
@@ -154,7 +150,6 @@ var paris = {
     unorderedList.appendChild(listItem);
   }
 };
-
 var lima = {
   locationName: 'Lima',
   minCustomersPerHour: 4,
