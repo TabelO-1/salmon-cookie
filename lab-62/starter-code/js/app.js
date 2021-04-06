@@ -1,14 +1,15 @@
 const hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 const tableElement = document.getElementById('sales-table');
 
-// TODO: pass minCustomersPerHour, maxCustomersPerHour, and avgCookiesPerHour as parameters of this function
-// set them as dynamic properties inside of this (based on their passed in data)
 function CookieStand(locationName, minCustomersPerHour, maxCustomersPerHour, avgCookiesPerSale) {
   this.locationName = locationName;
+  this.minCustomersPerHour = minCustomersPerHour;
+  this.maxCustomersPerHour = maxCustomersPerHour;
+  this.avgCookiesPerSale = avgCookiesPerSale;
   this.customersEachHour = [];
   this.cookiesEachHour = [];
   this.totalDailyCookies = 0;
-  // TODO: // push "this" object to the CookieStand.all array on every instantiation
+  CookieStand.all.push(this)
 }
 
 CookieStand.prototype.calcCustomersEachHour = function() {
@@ -18,7 +19,7 @@ CookieStand.prototype.calcCustomersEachHour = function() {
 };
 
 CookieStand.prototype.calcCookiesEachHour = function() {
-  // TODO: invoke the method that calculates number of customers each hour here
+  this.calcCustomersEachHour();
   for (let i = 0; i < hours.length; i++) {
     const oneHour = Math.ceil(this.customersEachHour[i] * this.avgCookiesPerSale);
     this.cookiesEachHour.push(oneHour);
@@ -27,7 +28,7 @@ CookieStand.prototype.calcCookiesEachHour = function() {
 };
 
 CookieStand.prototype.render = function() {
-  // TODO: generate the calculation of customers each hour here
+  this.calcCookiesEachHour();
   const tableRow = document.createElement('tr');
   let tableDataElement = document.createElement('td');
   tableDataElement.textContent = this.locationName;
@@ -44,8 +45,14 @@ CookieStand.prototype.render = function() {
 };
 
 CookieStand.all = [];
+let bend = new CookieStand('Bend', 1, 17, 13);
+let redmond = new CookieStand('Redmond', 1, 7, 3);
+let lapine = new CookieStand('La Pine', 1, 44, 2);
+let crookcountry = new CookieStand('Crook Country', 4, 12, 7);
+let theMOOON = new CookieStand('The Moon', 0, 1750, 5);
+let mars = new CookieStand('Mars', 0, 15000, 3);
+let dogfreindlycoookies = new CookieStand('Dog Freindly Cookies', 0, 7500, 30);
 
-// TODO: instantiate all CookieStand objects (with sample data)
 
 function random(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
