@@ -44,11 +44,15 @@ CookieStand.prototype.render = function() {
   tableElement.appendChild(tableRow);
 };
 
-CookieStand.all = [
-  bend = new CookieStand('Bend', 1, 17, 13),
-  redmond = new CookieStand('Redmond', 1, 7, 3),
-  lapine = new CookieStand('La Pine', 1, 44, 2),
-]
+CookieStand.all = [];
+let bend = new CookieStand('Bend', 1, 17, 13);
+let redmond = new CookieStand('Redmond', 1, 7, 3);
+let lapine = new CookieStand('La Pine', 1, 44, 2);
+let crookcountry = new CookieStand('Crook Country', 4, 12, 7);
+let theMOOON = new CookieStand('The Moon', 0, 1750, 5);
+let mars = new CookieStand('Mars', 0, 15000, 3);
+let dogfreindlycoookies = new CookieStand('Dog Freindly Cookies', 0, 7500, 30);
+
 
 function random(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
